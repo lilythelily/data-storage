@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue200: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --blue850: hsl(228, 56%, 26%);
+  --blue950: hsl(229, 57%, 11%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: url("./images/bg-desktop.png"), var(--blue950);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: var(--blue200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.icon1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  background: url("./images/icon-document.svg"), var(--blue950);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.625rem;
+  box-shadow: 0.125rem 0.0625rem 0.625rem hsla(225, 57%, 3%, 0.2);
+}
+
+.icon2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  background: url("./images/icon-folder.svg"), var(--blue950);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.625rem;
+  box-shadow: 0.125rem 0.0625rem 0.625rem hsla(225, 57%, 3%, 0.2);
+}
+
+.icon3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  background: url("./images/icon-upload.svg"), var(--blue950);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.625rem;
+  box-shadow: 0.125rem 0.0625rem 0.625rem hsla(225, 57%, 3%, 0.2);
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover {
+  border-bottom: 0.125rem solid var(--blue850);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 8.75rem;
+}
+
+.logo-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background: var(--blue850);
+  padding: 2.5rem 7.5rem 1.875rem 2.5rem;
+  border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+}
+
+h1 {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsla(243, 100%, 93%, 0.8);
+  margin-bottom: 1.25rem;
+}
+
+.gb {
+  font-weight: 700;
+  color: var(--blue200);
+}
+
+.small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.625rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 1.25rem;
+  background: hsla(229, 57%, 11%, 0.5);
+  border-radius: 2.5rem;
+}
+
+.pink-bar {
+  width: 15rem;
+  height: 0.875rem;
+  background: url("./images/Ellipse\ 2.svg"),
+    linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  background-repeat: no-repeat, no-repeat;
+  background-position: center right 0.1875rem, center;
+  border-radius: 2.5rem;
+  z-index: 16;
+  margin-top: -1.0625rem;
+  margin-left: 0.1875rem;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--blue850);
+  border-radius: 0.625rem;
+  padding: 2.25rem;
+  width: 100%;
+}
+
+.hover-chip {
+  color: var(--blue950);
+  background-color: #fff;
+  font-size: 2.375rem;
+  font-weight: 700;
+  padding: 0.875rem;
+  border-radius: 0.625rem 0.625rem 0 0.625rem;
+  position: absolute;
+  right: 2.5rem;
+  top: -2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.hover-chip::after {
+  content: url("./images/triangle.svg");
+  position: absolute;
+  bottom: -1.875rem;
+  right: 0;
+}
+
+.left {
+  font-size: 0.875rem;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: end;
+  gap: 2.5rem;
+  max-width: 56.25rem;
+  width: 90vw;
+  position: relative;
+}
+
+footer {
+  font-size: 0.625rem;
+  opacity: 0.5;
+  margin-top: 1.5rem;
+  position: absolute;
+  bottom: 1.5rem;
+  color: var(--grayish-blue);
+}
+
+/* ---reponsive---- */
+
+@media (max-width: 55rem) {
+  body {
+    background: url("./images/bg-mobile.png"), var(--blue950);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .logo-icon {
+    grid-row: 1;
+  }
+
+  .hover-chip {
+    border-radius: 0.625rem;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+  }
+
+  .hover-chip::after {
+    display: none;
+  }
+}
